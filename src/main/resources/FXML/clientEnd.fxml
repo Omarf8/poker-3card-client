@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ClientController"
+            fx:id="endBP"
+            styleClass="border-pane"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <MenuBar>
+            <Menu text="Options">
+                <MenuItem text="Fresh Start" onAction="#freshStartMethod"/>
+                <MenuItem text="New Look" onAction="#newLookEndMethod"/>
+                <MenuItem text="Exit" onAction="#exitMethod"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox spacing="60" alignment="CENTER">
+            <Text fx:id="statusText" styleClass="status-text"/>
+            <HBox spacing="150" alignment="CENTER">
+                <VBox alignment="CENTER">
+                    <Text styleClass="end-text" text="Dealer"/>
+                    <HBox spacing="10" alignment="CENTER">
+                        <ImageView fx:id="dealerEndC1" fitHeight="130" fitWidth="100" />
+                        <ImageView fx:id="dealerEndC2" fitHeight="130" fitWidth="100" />
+                        <ImageView fx:id="dealerEndC3" fitHeight="130" fitWidth="100" />
+                    </HBox>
+                    <Region minHeight="80"/>
+                    <HBox spacing="10" alignment="CENTER">
+                        <ImageView fx:id="playerEndC1" fitHeight="130" fitWidth="100"/>
+                        <ImageView fx:id="playerEndC2" fitHeight="130" fitWidth="100"/>
+                        <ImageView fx:id="playerEndC3" fitHeight="130" fitWidth="100"/>
+                    </HBox>
+                    <Text styleClass="end-text" text="Player"/>
+                </VBox>
+
+                <VBox alignment="CENTER">
+                    <Text styleClass="earnings-text" text="Earnings"/>
+                    <StackPane>
+                        <Region styleClass="end-box"/>
+                        <Text fx:id="earningsText" styleClass="earnings-box-text" text="\$"/>
+                    </StackPane>
+                    <Region minHeight="50"/>
+                    <Button fx:id="playAgainButton" styleClass="end-buttons" text="Play Again" onAction="#playAgainMethod"/>
+                    <Region minHeight="50"/>
+                    <Button fx:id="exitButton" styleClass="end-buttons" text="Exit" onAction="#exitMethod"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,16 @@
+# Target output
+target/
+
+# Eclipse
+.classpath
+.project
+.settings
+
+# IntelliJ
+.idea
+*.iml
+
+# VSCode
+.vscode/
+
+.DS_Store

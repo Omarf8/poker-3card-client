@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ClientController"
+            fx:id="welcomeBP"
+            styleClass="border-pane"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <Region minHeight="50"/>
+            <Text styleClass="welcome-title" text="Welcome"/>
+            <Text styleClass="welcome-description" text="3 Card Poker"/>
+            <Region minHeight="10"/>
+            <ImageView fitHeight="250" fitWidth="250" preserveRatio="true">
+                <Image url="@/images/4suits.PNG"/>
+            </ImageView>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <HBox spacing="50" alignment="CENTER">
+                <VBox spacing="5" alignment="CENTER">
+                    <Text styleClass="welcome-text" text="Port Number"/>
+                    <TextField fx:id="portTF" styleClass="welcome-textfield"/>
+                </VBox>
+                <VBox spacing="5" alignment="CENTER">
+                    <Text styleClass="welcome-text" text="IP Address"/>
+                    <TextField fx:id="ipTF" styleClass="welcome-textfield"/>
+                </VBox>
+            </HBox>
+
+            <Region minHeight="50"/>
+            <Button fx:id="connect" styleClass="connect-button" text="Connect" onAction="#connectToServer"/>
+        </VBox>
+    </center>
+
+</BorderPane>

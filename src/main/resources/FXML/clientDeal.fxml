@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ClientController"
+            fx:id="gameBP"
+            styleClass="border-pane"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <MenuBar>
+            <Menu text="Options">
+                <MenuItem text="Fresh Start" onAction="#freshStartMethod"/>
+                <MenuItem text="New Look" onAction="#newLookDealMethod"/>
+                <MenuItem text="Exit" onAction="#exitMethod"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <StackPane>
+                <HBox alignment="CENTER_LEFT">
+                    <Region minWidth="50"/>
+                    <VBox alignment="CENTER">
+                        <Text styleClass="total-text" text="Total"/>
+                        <StackPane>
+                            <Region styleClass="total-box"/>
+                            <Text fx:id="totalEarnings" styleClass="total-box-text" text="\$0"/>
+                        </StackPane>
+                    </VBox>
+                </HBox>
+                <VBox spacing="10" alignment="CENTER">
+                    <Text styleClass="hand-text" text="Dealer"/>
+                    <HBox spacing="20" alignment="CENTER">
+                        <StackPane>
+                            <Rectangle styleClass="transparent-rect" width="80" height="110"/>
+                            <ImageView fx:id="dealerC1" fitHeight="130" fitWidth="100" />
+                        </StackPane>
+                        <StackPane>
+                            <Rectangle styleClass="transparent-rect" width="80" height="110"/>
+                            <ImageView fx:id="dealerC2" fitHeight="130" fitWidth="100" />
+                        </StackPane>
+                        <StackPane>
+                            <Rectangle styleClass="transparent-rect" width="80" height="110"/>
+                            <ImageView fx:id="dealerC3" fitHeight="130" fitWidth="100" />
+                        </StackPane>
+                    </HBox>
+                </VBox>
+                <HBox alignment="CENTER_RIGHT">
+                    <ListView fx:id="listItems" prefWidth="300" prefHeight="225"/>
+                </HBox>
+            </StackPane>
+            <Region minHeight="15"/>
+            <HBox spacing="30" alignment="CENTER">
+                <StackPane>
+                    <Circle styleClass="ante-circle" radius="80"/>
+                    <VBox spacing="10" alignment="CENTER">
+                        <Text styleClass="circle-text" text="Ante"/>
+                        <Text fx:id="anteBet" styleClass="circle-text" text="\$5"/>
+                        <HBox spacing="20" alignment="CENTER">
+                            <Button fx:id="anteDec" styleClass="dec-circle" onAction="#decAnteMethod"/>
+                            <Button fx:id="anteInc" styleClass="inc-circle" onAction="#incAnteMethod"/>
+                        </HBox>
+                    </VBox>
+                </StackPane>
+                <StackPane>
+                    <Circle styleClass="play-circle" radius="80"/>
+                    <VBox spacing="10" alignment="CENTER">
+                        <Text styleClass="circle-text" text="Play"/>
+                        <Text fx:id="playBet" styleClass="circle-text" text="\$5"/>
+                    </VBox>
+                </StackPane>
+                <StackPane>
+                    <Circle styleClass="pair-circle" radius="80"/>
+                    <VBox spacing="10" alignment="CENTER">
+                        <Text styleClass="circle-text" text="Pair+"/>
+                        <Text fx:id="pairBet" styleClass="circle-text" text="\$5"/>
+                        <HBox spacing="20" alignment="CENTER">
+                            <Button fx:id="pairDec" styleClass="dec-circle" onAction="#decPairMethod"/>
+                            <Button fx:id="pairInc" styleClass="inc-circle" onAction="#incPairMethod"/>
+                        </HBox>
+                    </VBox>
+                </StackPane>
+            </HBox>
+            <Region minHeight="15"/>
+            <HBox spacing="20" alignment="CENTER">
+                <StackPane>
+                    <Rectangle styleClass="transparent-rect" width="80" height="110"/>
+                    <ImageView fx:id="playerC1" fitHeight="130" fitWidth="100" />
+                </StackPane>
+                <StackPane>
+                    <Rectangle styleClass="transparent-rect" width="80" height="110"/>
+                    <ImageView fx:id="playerC2" fitHeight="130" fitWidth="100" />
+                </StackPane>
+                <StackPane>
+                    <Rectangle styleClass="transparent-rect" width="80" height="110"/>
+                    <ImageView fx:id="playerC3" fitHeight="130" fitWidth="100"/>
+                </StackPane>
+            </HBox>
+            <Text styleClass="hand-text" text="Player"/>
+            <Region minHeight="5"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox>
+            <HBox spacing="50" alignment="CENTER">
+                <Button fx:id="dealButton" styleClass="bottom-buttons" text="Deal" onAction="#dealMethod"/>
+                <StackPane>
+                    <Button fx:id="playButton" styleClass="bottom-buttons" text="Play" onAction="#playMethod"/>
+                    <Button fx:id="nextButton" styleClass="next-button" onAction="#nextMethod">
+                        <graphic>
+                            <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                                <Image url="@/images/nextGray.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </StackPane>
+                <Button fx:id="foldButton" styleClass="bottom-buttons" text="Fold" onAction="#foldMethod"/>
+            </HBox>
+            <Region minHeight="15"/>
+        </VBox>
+    </bottom>
+</BorderPane>
