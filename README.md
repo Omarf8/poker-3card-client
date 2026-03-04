@@ -3,9 +3,9 @@
 This repository contains the interactive client application for a multi-client 3-Card Poker game. To play, the [server](https://github.com/Omarf8/poker-3card-server) must be running first. Using JavaFX, the client communicates with a local server to facilitate gameplay logic, and the client program serves as the main application to play 3-Card Poker.
 
 ## Technical Highlights
-* Implemented a reliable communication layer with Java Sockets to exchange real-time game data with the server.
-* Developed an interactive interface using FXML and CSS files, applying event-driven programming for dynamic gameplay and visual updates.
-* Utilized Maven to manage the project's lifecycle, providing a portable and consistent environment.
+* **Network:** Implemented a reliable communication layer with Java Sockets to exchange real-time game data with the server.
+* **JavaFX GUI:** Developed an interactive interface using FXML and CSS files, applying event-driven programming for dynamic gameplay and visual updates.
+* **Build Process:** Utilized Maven to manage the project's lifecycle, providing a portable and consistent environment.
 
 ## Screenshots
 ### Setup
