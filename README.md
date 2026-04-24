@@ -8,6 +8,8 @@ This repository contains the interactive client application for a multi-client 3
 * **Build Process:** Utilized Maven to manage the project's lifecycle, providing a portable and consistent environment.
 
 ## Screenshots
+Video Preview: [Watch the Demo](https://youtu.be/ovPkozp2bUU)
+
 ### Setup
 | Server Setup | Client Login |
 | :--- | :--- |
